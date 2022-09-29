@@ -1,0 +1,14 @@
+const scrollToTop = () => {
+  const topBtn = document.querySelector("#scrollToTopButton");
+
+  topBtn.addEventListener("click", (event) => {
+    event.preventDefault(); // отменяем стандартное поведение ссылки
+    seamless.scrollIntoView(document.querySelector(".header"), {
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+  });
+};
+
+scrollToTop();
